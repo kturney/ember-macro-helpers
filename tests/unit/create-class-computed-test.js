@@ -141,13 +141,13 @@ test('it rewrites when observer changes', function(assert) {
     }
   });
 
-  assert.equal(observerCallback.callCount, 2);
+  assert.equal(observerCallback.callCount, 3);
 
   assert.equal(callback.callCount, 2);
 
   subject.set('test5', 'test6');
 
-  assert.equal(observerCallback.callCount, 3);
+  assert.equal(observerCallback.callCount, 4);
 
   subject.get('computed');
 
@@ -157,7 +157,7 @@ test('it rewrites when observer changes', function(assert) {
 
   subject.get('computed');
 
-  assert.equal(observerCallback.callCount, 3);
+  assert.equal(observerCallback.callCount, 4);
 
   assert.equal(callback.callCount, 4);
 });
